@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../06-formularios/css/style.css">
+</head>
+<body>
+    <div class="container-carga-de-archivo">
+  <div class="loader-carga-de-archivo">
+    <div class="all-input-carga-de-archivo">
+      <input type="file" name="inputFile" id="inputFile" class="input-carga-de-archivo active" data-error="0" data-action="uploadFile" data-action-delete="deleteFile" multiple/>
+      <label for="inputFile" class="label-carga-de-archivo">Etiqueta*</label>
+      <label for="inputFile" class="container-input-carga-de-archivo">
+        <span class="button-file-carga-de-archivo">Seleccionar archivo</span>
+        <span class="file-name-carga-de-archivo">Sin archivo seleccionado</span>
+      </label>
+      <span class="text-validation-carga-de-archivo">Cualquier tipo de archivo. Peso máximo: 2 MB</span>
+    </div>
+    <div class="load-button-carga-de-archivo">
+      <div class="load-carga-de-archivo">
+        <!-- indicador de carga -->
+        <div class="spinner-indicador-de-carga" style="width: 32px; height: 32px; border-width: 6px;" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <!-- end indicador de carga -->
+      </div>
+      <button class="button-loader-carga-de-archivo" disabled>Cargar archivo</button>
+    </div>
+  </div>
+
+  <div class="container-detail-carga-de-archivo">
+    <span class="alert-carga-de-archivo visually-hidden"></span>
+    <div class="attached-files-carga-de-archivo"></div>
+  </div>
+</div>
+<script src="../06-formularios/js/carga-de-archivo.js"></script>
+</body>
+</html>

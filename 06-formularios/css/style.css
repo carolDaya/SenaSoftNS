@@ -1,0 +1,350 @@
+/**
+ * Gov.co (https://www.gov.co) - Gobierno de Colombia
+ *  - Componente: Carga de archivo
+ *  - Version: 4.0.0
+ */
+
+/* Fuente iconografica */
+@font-face {
+  font-family: "govco-font";
+  src: url("../assets/icons/fonts/govco-font-icons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* WorkSans-Regular */
+@font-face {
+  font-family: 'WorkSans-Regular';
+  src: url('../assets/fonts/Work_Sans/static/WorkSans-Regular.ttf');
+}
+
+/* WorkSans-Regular */
+@font-face {
+  font-family: 'WorkSans-Medium';
+  src: url('../assets/fonts/Work_Sans/static/WorkSans-Medium.ttf');
+}
+
+/* Montserrat-SemiBold */
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('../assets/fonts/Montserrat/Montserrat-SemiBold.ttf');
+}
+
+/* Montserrat-Medium */
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('../assets/fonts/Montserrat/Montserrat-Medium.ttf');
+}
+
+html {
+  font-size: 100%; /* 100% = 16px */
+}
+
+.label-carga-de-archivo {
+  font-family: WorkSans-Regular;
+  font-size: 1rem;
+  color: #4B4B4B;
+  display: block;
+}
+
+.loader-carga-de-archivo {
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.all-input-carga-de-archivo {
+  display: inline-block;
+  position: relative;
+}
+
+.input-carga-de-archivo {
+  opacity: 0;
+  position: absolute;
+  height: 70%;
+  width: 100%;
+  top: 0;
+  cursor: pointer;
+}
+
+.container-input-carga-de-archivo {
+  padding: 0.125rem;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  margin-top: 0.2rem;
+  margin-bottom: 0.813rem;
+  max-width: 24.375rem;
+}
+
+.container-input-carga-de-archivo .button-file-carga-de-archivo {
+  width: 11.625rem;
+  border-radius: 0.313rem 0 0 0.313rem;
+  border: 0.094rem solid #3366CC;
+  background-color: #3366CC;
+  font-family: WorkSans-Medium;
+  color: #fff;
+  text-align: center;
+  padding: 0.438rem 0.875rem 0.438rem 0.875rem;
+}
+
+.container-input-carga-de-archivo .file-name-carga-de-archivo {
+  width: 13.75rem;
+  border: 0.094rem solid #737373;
+  border-radius: 0 0.313rem 0.313rem 0;
+  background-color: #FFFFFF;
+  font-family: WorkSans-Regular;
+  color: #737373;
+  padding: 0.438rem 0.313rem 0.438rem 0.313rem;
+}
+
+.container-input-carga-de-archivo .button-file-carga-de-archivo,
+.container-input-carga-de-archivo .file-name-carga-de-archivo {
+  font-size: 1rem;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.text-validation-carga-de-archivo {
+  color: #4B4B4B;
+  font-family: WorkSans-Regular;
+  font-size: 1rem;
+}
+
+.button-loader-carga-de-archivo {
+  background-color: #3366CC;
+  min-width: 10.313rem;
+  height: 2.625rem;
+  border-radius: 1.563rem;
+  color: #FFFFFF;
+  font-family: WorkSans-Medium;
+  font-size: 1rem;
+  border: 0.063rem solid #3366CC;
+  display: inline-block;
+}
+
+.input-carga-de-archivo[data-error="1"] + .label-carga-de-archivo {
+  color: #A80521;
+}
+
+.container-detail-carga-de-archivo {
+  border-top: 0.063rem solid #BABABA;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.alert-carga-de-archivo {
+  color: #A80521;
+  font-size: 1rem;
+  font-family: WorkSans-Regular;
+  display: block;
+  padding-top: 0.8rem;
+}
+
+.attached-files-carga-de-archivo {
+  padding-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.attached-file-carga-de-archivo {
+  width: 19.375rem;
+  height: 4.25rem;
+  background-color: #FFFFFF;
+  border: 0.063rem solid #E8EFFC;
+  border-radius: 0.313rem;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.attached-file-carga-de-archivo span {
+  color: #000000;
+  font-family: Montserrat-Medium;
+  font-size: 0.875rem;
+  display: block;
+}
+
+.attached-file-carga-de-archivo span:first-child {
+  font-family: Montserrat-SemiBold;
+}
+
+.icon-text-carga-de-archivo {
+  display: flex;
+  align-items: center;
+  column-gap: 0.625rem;
+  margin-left: 1rem;
+}
+
+.file-alt-carga-de-archivo::after {
+  font-family: "govco-font";
+  content: "\ec18";
+  font-size: 2rem;
+  color: #004884;
+}
+
+.container-text-name-carga-de-archivo {
+  max-width: 13.875rem;
+}
+
+.text-name-carga-de-archivo {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.trash-alt-1-carga-de-archivo {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  right: 0.625rem;
+  line-height: 1;
+  padding: 0.2rem 0.4rem;
+}
+
+.trash-alt-1-carga-de-archivo::after {
+  font-family: "govco-font";
+  content: "\ec83";
+  font-size: 1.5rem;
+  color: #004884;
+  cursor: pointer;
+}
+
+.load-button-carga-de-archivo {
+  display: flex;
+}
+
+.load-carga-de-archivo {
+  padding: 0 1rem;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.input-carga-de-archivo:focus-visible ~ .container-input-carga-de-archivo {
+  border-radius: 0.313rem;
+  outline: max(0.125rem, 0.15em) solid #000000;
+}
+
+.button-loader-carga-de-archivo:focus-visible,
+.attached-file-carga-de-archivo:focus-visible  {
+  outline: max(0.125rem, 0.15em) solid #000000;
+  outline-offset: max(0.125rem, 0.15em);
+  outline-style: auto;
+}
+
+.input-carga-de-archivo:hover ~ .container-input-carga-de-archivo .button-file-carga-de-archivo,
+.input-carga-de-archivo:focus ~ .container-input-carga-de-archivo .button-file-carga-de-archivo,
+.button-loader-carga-de-archivo:hover,
+.button-loader-carga-de-archivo:focus-visible,
+.attached-file-carga-de-archivo:hover,
+.attached-file-carga-de-archivo:focus,
+.attached-file-carga-de-archivo:focus-within {
+  background-color: #004884;
+}
+
+.attached-file-carga-de-archivo:hover span,
+.attached-file-carga-de-archivo:hover .file-alt-carga-de-archivo::after,
+.attached-file-carga-de-archivo:hover .trash-alt-1-carga-de-archivo::after,
+.attached-file-carga-de-archivo:focus span,
+.attached-file-carga-de-archivo:focus .file-alt-carga-de-archivo::after,
+.attached-file-carga-de-archivo:focus .trash-alt-1-carga-de-archivo::after,
+.attached-file-carga-de-archivo:focus-within span,
+.attached-file-carga-de-archivo:focus-within .file-alt-carga-de-archivo::after,
+.attached-file-carga-de-archivo:focus-within .trash-alt-1-carga-de-archivo::after  {
+  color: #FFFFFF;
+}
+
+.attached-file-carga-de-archivo .trash-alt-1-carga-de-archivo:focus-visible,
+.attached-file-carga-de-archivo .trash-alt-1-carga-de-archivo:focus {
+  background-color: transparent;
+}
+
+.attached-file-carga-de-archivo .trash-alt-1-carga-de-archivo:focus-visible {
+  outline: max(0.125rem, 0.15em) solid #000000;
+  outline-offset: max(0.125rem, 0.15em);
+  outline-style: auto;
+}
+
+.input-carga-de-archivo:disabled {
+  cursor: default;
+}
+
+.input-carga-de-archivo:disabled ~ .container-input-carga-de-archivo .button-file-carga-de-archivo {
+  background-color: #737373;
+  border-color: #737373;
+  cursor: default;
+}
+
+.input-carga-de-archivo:disabled ~ .container-input-carga-de-archivo .file-name-carga-de-archivo {
+  background-color: #F2F2F2;
+  border-color: #BABABA;
+  color: #BABABA;
+  cursor: default;
+}
+
+.input-carga-de-archivo.active:disabled ~ .label-carga-de-archivo,
+.input-carga-de-archivo.active:disabled ~ .text-validation-carga-de-archivo {
+  color: #BABABA;
+}
+
+.button-loader-carga-de-archivo:disabled {
+  background-color: #737373;
+  border-color: #737373;
+}
+
+/* Responsive */
+.container-carga-de-archivo.responsive .loader-carga-de-archivo {
+  display: block;
+}
+
+.container-carga-de-archivo.responsive .load-button-carga-de-archivo {
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-top: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.container-carga-de-archivo.responsive .all-input-carga-de-archivo {
+  width: 100%;
+}
+
+.container-carga-de-archivo.responsive .container-input-carga-de-archivo .button-file-carga-de-archivo {
+  width: 10.375rem;
+}
+
+.container-carga-de-archivo.responsive .container-text-name-carga-de-archivo {
+  max-width: 10rem;
+}
+
+.container-carga-de-archivo.responsive .text-validation-carga-de-archivo {
+  font-size: 0.875rem;
+}
+
+.container-carga-de-archivo.small-fileupload .attached-file-carga-de-archivo {
+  margin-right: 0;
+  width: 100%;
+}
+.container-carga-de-archivo.responsive .container-input-carga-de-archivo {
+  margin-bottom: 0.2rem;
+}
+
+/* indicador de carga */
+.spinner-indicador-de-carga {
+  display: inline-block;
+  vertical-align: -0.125em;
+  border-radius: 50%;
+  -webkit-animation: .75s linear infinite spinner-border;
+  animation: .75s linear infinite spinner-border;
+  border-color: #0B457F;
+  border-style: solid;
+  border-right-color: transparent;
+  position: relative;
+}
+/* end indicador de carga */
