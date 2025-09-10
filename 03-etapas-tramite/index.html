@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../03-etapas-tramite/css/style.css">
+</head>
+<body>
+    <div class="container-example-linea-avance">
+	<div class="linea-avance h-linea-avance" id="lineaAvance1">
+		<div class="progress">
+			<div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+		</div>
+		<div class="items-header-linea-avance">
+			<div class="header-linea-avance active-linea-avance">
+			<div class="indicator-linea-avance" data-la-target="#itemLineaAvance11" percentage="15">1</div>
+			<span class="title-linea-avance">Inicio</span>
+			</div>
+			<div class="header-linea-avance">
+			<div class="indicator-linea-avance" data-la-target="#itemLineaAvance12" percentage="50">2</div>
+			<span class="title-linea-avance">Hago mi solicitud</span>
+			</div>
+			<div class="header-linea-avance">
+			<div class="indicator-linea-avance" data-la-target="#itemLineaAvance13" percentage="80">3</div>
+			<span class="title-linea-avance">Procesan mi solicitud</span>
+			</div>
+			<div class="header-linea-avance">
+			<div class="indicator-linea-avance" data-la-target="#itemLineaAvance14" percentage="100">4</div>
+			<span class="title-linea-avance">Respuesta</span>
+			</div>
+		</div>
+		<div id="itemLineaAvance11" class="body-linea-avance active-linea-avance" data-la-parent="#lineaAvance1">
+			<!-- Contenido Item -->
+			<div class="contents-example-linea-avance">
+			<button type="button" class="btn fill-btn" style="width: 165px; height: 42px;" onclick="nextItemAdvanceLineHorizontal(event)">Continuar</button>
+			</div>
+		</div>
+		<div id="itemLineaAvance12" class="body-linea-avance" data-la-parent="#lineaAvance1">
+			<!-- Contenido Item -->
+			<div class="contents-example-linea-avance">
+			<button type="button" class="btn fill-btn" style="width: 165px; height: 42px;" onclick="nextItemAdvanceLineHorizontal(event)">Continuar</button>
+			</div>
+		</div>
+		<div id="itemLineaAvance12" class="body-linea-avance" data-la-parent="#lineaAvance1">
+			<!-- Contenido Item -->
+			<div class="contents-example-linea-avance">
+			<button type="button" class="btn fill-btn" style="width: 165px; height: 42px;" onclick="nextItemAdvanceLineHorizontal(event)">Continuar</button>
+			</div>
+		</div>
+		<div id="itemLineaAvance14" class="body-linea-avance" data-la-parent="#lineaAvance1">
+			<!-- Contenido Item -->
+			<div class="contents-example-linea-avance">
+			<button type="button" class="btn fill-btn" style="width: 165px; height: 42px;">Finalizar</button>
+			</div>
+		</div>
+	</div>
+</div>
+    <script src="../03-etapas-tramite/js/linea-avance.js"></script>
+</body>
+</html>

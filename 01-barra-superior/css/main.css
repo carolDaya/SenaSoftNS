@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "govco-font";
+  src: url("../assets/icons/fonts/font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 100%;
+}
+
+.barra-superior {
+  background-color: #3366cc;
+  width: 100%;
+  height: 3rem;
+  padding-left: 4.375rem;
+  position: relative;
+}
+.barra-superior a {
+  content: url(https://cdn.www.gov.co/assets/images/logo.svg);
+  height: 1.875rem;
+  width: 8.5rem;
+}
+.barra-superior a:focus-visible {
+  outline: max(0.125rem, 0.15em) solid #ffffff;
+  border-radius: 0.313rem;
+}
+.barra-superior .idioma-icon-barra-superior {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 0.313rem;
+  background-color: #ffffff;
+  cursor: pointer;
+  padding: 0;
+  border: 0.125rem solid #ffffff;
+  font-size: 10px;
+  position: absolute;
+  right: 5.375rem;
+}
+.barra-superior .idioma-icon-barra-superior::before {
+  font-family: "govco-font";
+  content: "\ec56";
+  color: #3366cc;
+  font-size: 14px;
+}
+.barra-superior .idioma-icon-barra-superior:hover {
+  background-color: #004884;
+}
+.barra-superior .idioma-icon-barra-superior:hover::before {
+  color: #ffffff;
+}
+.barra-superior .idioma-icon-barra-superior:focus {
+  outline: max(0.125rem, 0.15em) solid #ffffff;
+  outline-offset: max(0.188rem, 0.15em);
+}
+
+@media (max-width: 991px) {
+  .barra-superior {
+    justify-content: center;
+    padding: 0;
+  }
+  .barra-superior .idioma-icon-barra-superior {
+    right: 1rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
